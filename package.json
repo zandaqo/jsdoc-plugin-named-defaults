@@ -1,0 +1,23 @@
+{
+  "name": "jsdoc-plugin-named-defaults",
+  "version": "1.0.0",
+  "description": "A plugin for JSDoc to automatically pick up default values for pseudo-named parameters created using destructuring.",
+  "main": "named-defaults.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zandaqo/jsdoc-plugin-named-defaults.git"
+  },
+  "keywords": [
+    "jsdoc",
+    "plugin",
+    "defaults",
+    "ES2015",
+    "jsdoc3"
+  ],
+  "author": "Maga D. Zandaqo <denelxan@gmail.com> (http://maga.name)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zandaqo/jsdoc-plugin-named-defaults/issues"
+  },
+  "homepage": "https://github.com/zandaqo/jsdoc-plugin-named-defaults#readme"
+}
