@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-plugin-named-defaults",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin for JSDoc to automatically pick up default values for pseudo-named parameters created using destructuring.",
   "main": "named-defaults.js",
   "repository": {

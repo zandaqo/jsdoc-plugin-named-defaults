@@ -19,8 +19,9 @@ exports.handlers = {
       }
       if (!namedParams) continue;
       for (const namedParam of namedParams) {
-        const namedParamName = namedParam.shorthand ? namedParam.key.name : namedParam.value.left.name;
-        const namedParamDefault = namedParam.value.right;
+        if (namedParam.value.type !== "AssignmentPattern") continue;
+        let namedParamName = namedParam.key.name;
+        let namedParamDefault = namedParam.value.right;
         if (namedParamDefault && namedParamDefault.type === 'Literal') {
           const namedParamDefaultValue = namedParamDefault.value;
           if (e.comment) e.comment = e.comment.replace(`[options.${namedParamName}]`, `[options.${namedParamName}=${namedParamDefaultValue}]`);
