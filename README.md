@@ -14,17 +14,15 @@ and add to the list of plugins in your JSDoc configuration file:
 ```javascript
 /**
 * @param {number} start the starting index
+* @param {Object} [details]
+* @param {number} [details.amount] the amount of elements
+* @param {string} [details.message] the message to show
 * @param {Object} [options]
-* @param {number} [options.amount] the amount of elements
-* @param {string} [options.message] the message to show
+* @param {boolean} [options.async] the amount of elements
+* @param {boolean} [options.sort] the message to show
 */
-function getElements(start, { amount = 2, message = 'Done!' } = {}) {
+function getElements(start, { amount = 2, message = 'Done!' } = {}, {async = true, sort = false} = {}) {
 
 }
 ```
-the plugin will set `2` and `'Done!'` as the default values for `options.amount` and `options.message`, respectively, in the resulting documentation.
-
-# Limitations
-
-- only works for literal default values
-- only allows one object parameter per function named `options` as the holder of the pseudo-named parameters.
+the plugin will set `2` and `'Done!'` as the default values for `details.amount` and `details.message`, respectively, as well as `true` and `false` for `options.async` and `options.sort`.
